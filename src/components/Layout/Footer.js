@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <Box
-        sx={{ textAlign: "center", bgcolor: "#1A1A19", color: "white", p: 3 }}
+        sx={{ textAlign: "center", bgcolor: "#1A1A19", color: "white", p: 1 }}
       >
         <Box
           sx={{

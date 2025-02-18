@@ -1,5 +1,5 @@
 .home {
-  height: 95vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: left;
@@ -7,8 +7,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding:0;
+  padding-top: 80px; 
   
 }
+
 
 .headerContainer {
   width: auto;
@@ -35,7 +38,7 @@
 .headerContainer button {
   background-color: #811717;
   margin-top: 80%;
-  margin-left: 43%;
+  margin-left: 23%;
   text-align: center;
   border: none;
   border-radius: 5px;
@@ -62,7 +65,7 @@
 .headerContainer button {
   background-color: #811717;
   margin-top: 38%;
-  margin-left: 43%;
+  margin-left: 23%;
   text-align: center;
   border: none;
   border-radius: 5px;
@@ -118,4 +121,41 @@
     
     
   }
+}
+.section-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.section-nav button {
+  margin: 10px;
+  padding: 10px 15px;
+  background-color: #5e0605;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.section-nav button:hover {
+  background-color: #8b0000;
+}
+
+.content {
+  margin-top: 20px;
+}
+.content {
+  margin: 0;  /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+}
+
+.content > * {
+  margin-bottom: 0;  /* Ensure no space between sections */
+  padding-bottom: 0;
+}
+
+.merged-sections > div {
+  margin: 0;
+  padding: 0;
 }

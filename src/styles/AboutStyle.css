@@ -1,0 +1,95 @@
+/* About Us Heading */
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  
+  /* Transparent Overlay (without blur) */
+  .overlay {
+    width: 100vw;
+    max-width: 100%;
+    min-height: 4in;
+    height: 380px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Optional: keeps some transparency for overlay */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2; /* Make sure overlay stays on top */
+  }
+  
+  /* Values Section */
+  .values-wrapper {
+    width: 100%;
+  }
+  
+  /* Values Card */
+  .values-card {
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+  }
+  
+  .values-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ensures Values Section Starts Right Below */
+  .values-container {
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .about-title {
+      font-size: 2.5rem;
+    }
+    .overlay {
+      min-height: 3.5in;
+      padding: 35px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+    .overlay {
+      padding: 30px;
+    }
+    .values-container {
+      padding: 30px;
+    }
+    .values-card {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 1.8rem;
+    }
+    .overlay {
+      min-height: 3in;
+      padding: 25px;
+    }
+    .values-card {
+      padding: 20px;
+    }
+  }
+  
