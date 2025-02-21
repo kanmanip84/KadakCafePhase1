@@ -6,10 +6,12 @@ import Menu from "./../components/Menu";
 import Testimonials from "./../components/Testimonials";
 import Footer from "./../components/Layout/Footer";
 import VideoSection from "./../components/VideoSection";
+import LocationPopup from "./../components/LocationPopup";
 
 const Home = () => {
   return (
     <Box>
+       <LocationPopup />
       <Header />
       <VideoSection /> {/* Background Video Section */}
       <HeroSection />

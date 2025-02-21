@@ -1,152 +1,420 @@
-import { Box, Grid, Typography ,Button} from "@mui/material";
-import React from "react";
-import "./../components/Menu.css";
-
+import { useState } from "react";
+import { Box, Grid, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+
 
 const menuData = [
   {
-    category: "Chai",
-    image: "/image/chai.jpg",
+   
+    category: "Combos",
+    image: "/image/combo.png",
     items: [
-      { name: "Special Kadak", price: "$0.00" },
+      { name: "Combo 1", price: "$0.00" },
+      { name: "Combo 2", price: "$0.00" },
+      { name: "Combo 3", price: "$0.00" },
+      { name: "Combo 4", price: "$0.00" },
+      { name: "Combo 5", price: "$0.00" },
+   
+    ],
+  },
+  
+  {
+    category: "Snacks",
+    image: "/image/samosa.jpg",
+    items: [
+      { name: "Samosa", price: "$0.00" },
+      { name: "Aloo Patty", price: "$0.00" },
+      { name: "Paneer Patty", price: "$0.00" },
+      { name: "Mini Pakora", price: "$0.00" },
+      { name: "Everything Bagel", price: "$0.00" },
+      { name: "Jalapeno Bagel", price: "$0.00" },
+    ],
+  },
+  {
+    category: "Sides",
+    image: "/image/fries.jpg",
+    items: [
+      { name: "Masala Fries", price: "$0.00" },
+      { name: "Great Divide Fries", price: "$0.00" },
+      { name: "Onion Rings", price: "$0.00" },
+      { name: "Hash Browns", price: "$0.00" },
+      { name: "Kulcha Poutine", price: "$0.00" },
+      { name: "Masala Maggi", price: "$0.00" },
+    ],
+  },
+  {
+    category: "Chai",
+    image: "/image/teaglass.png",
+    items: [
+      { name: "Kadak Chai", price: "$0.00" },
       { name: "Adrak Chai", price: "$0.00" },
       { name: "Elaichi Chai", price: "$0.00" },
-      { name: "Gur Wali Chai", price: "$0.00" },
+      { name: "Gud Wali Chai", price: "$0.00" },
       { name: "Kesar Chai", price: "$0.00" },
-      { name: "Rose Chai", price: "$0.00" },
     ],
+    
   },
   {
     category: "Coffee",
     image: "/image/coffee.jpg",
     items: [
       { name: "Kadak Coffee", price: "$0.00" },
+      { name: "Pistachio Latte", price: "$0.00" },
+      { name: "Hazelnut Latte", price: "$0.00" },
+      { name: "Hot Chocolate", price: "$0.00" },
+      { name: "Cafe Mocha", price: "$0.00" },
       { name: "Cold Coffee", price: "$0.00" },
-      { name: "Latte", price: "$0.00" },
     ],
   },
   {
-    category: "Shakes",
+    category: "Milkshake",
     image: "/image/shakes.jpg",
     items: [
-      { name: "Mango", price: "$0.00" },
-      { name: "Watermelon", price: "$0.00" },
-      { name: "Chocolate", price: "$0.00" },
-      { name: "Pistachio", price: "$0.00" },
-      { name: "Banana", price: "$0.00" },
-      { name: "Oreo", price: "$0.00" },
+      { name: "Oreo Shake", price: "$0.00" },
+      { name: "KitKat Shake", price: "$0.00" },
+      { name: "Choco Chip Shake", price: "$0.00" },
+      { name: "Chocolate Shake", price: "$0.00" },
+      { name: "Vanilla Shake", price: "$0.00" },
     ],
   },
   {
-    category: "Cold Drinks",
+    category: "Drinks",
     image: "/image/colddrinks.jpg",
     items: [
-      { name: "Masala", price: "$0.00" },
-      { name: "Lassi", price: "$0.00" },
-      { name: "Lemon", price: "$0.00" },
-      { name: "Mango", price: "$0.00" },
-      { name: "Jerra", price: "$0.00" },
+      { name: "Milk Badam", price: "$0.00" },
+      { name: "Masala Lemonade", price: "$0.00" },
+      { name: "Masala Jeera", price: "$0.00" },
+      { name: "Doodh Soda", price: "$0.00" },
+      { name: "Pop (Can/Bottle)", price: "$0.00" },
+    ],
+  },
+  {
+    category: "Street Food",
+    image: "/image/K2.jpg",
+    items: [
+      { name: "Amritsari Kulcha", price: "$0.00" },
+      { name: "Reri Kulcha", price: "$0.00" },
+      { name: "Samosa Chaat", price: "$0.00" },
+      { name: "Papri Chaat", price: "$0.00" },
+      { name: "Aloo Tikki Chaat", price: "$0.00" },
+    ],
+  },
+  {
+    category: "Wraps",
+    image: "/image/K17.jpg",
+    items: [
+      { name: "Chilli Franky", price: "$0.00" },
+      { name: "Masala Veggie", price: "$0.00" },
+      { name: "Kadak Special", price: "$0.00" },
+      { name: "Bombay Franky", price: "$0.00" },
+      { name: "Punjabi Special", price: "$0.00" },
+    ],
+  },
+  {
+    category: "Sandwiches",
+    image: "/image/K10.jpg",
+    items: [
+      { name: "Grilled Cheese", price: "$0.00" },
+      { name: "Bombay Sandwich", price: "$0.00" },
+      { name: "Punjabi Club", price: "$0.00" },
+      { name: "Kadak Special", price: "$0.00" },
+      { name: "Paneer Maharaja", price: "$0.00" },
     ],
   },
   {
     category: "Burgers",
     image: "/image/K16.jpg",
     items: [
-      { name: "Allo Tikki", price: "$0.00" },
-      { name: "Paneer", price: "$0.00" },
-      { name: "Maharaja", price: "$0.00" },
-      { name: "Macaroni", price: "$0.00" },
-      { name: "Misc", price: "$0.00" },
+      { name: "Aloo Tikki Burger", price: "$0.00" },
+      { name: "Paneer Burger", price: "$0.00" },
+      { name: "Maharaja Burger", price: "$0.00" },
+      { name: "Aloo Tikki Noodle Burger", price: "$0.00" },
     ],
   },
   {
-    category: "Rolls/Sandwich",
-    image: "/image/K17.jpg",
+    category: "Pastas",
+    image: "/image/K19.jpg",
     items: [
-      { name: "Paneer Kathi", price: "$0.00" },
-      { name: "Shahi", price: "$0.00" },
-      { name: "Allo Tikki", price: "$0.00" },
-      { name: "Veggie Paneer", price: "$0.00" },
-      { name: "Grilled Cheese", price: "$0.00" },
+      { name: "Alfredo Sauce", price: "$0.00" },
+      { name: "Marinara Sauce", price: "$0.00" },
+      { name: "Special Kadak", price: "$0.00" },
+      { name: "Cheese Macaroni", price: "$0.00" },
+      { name: "Pesto Sauce", price: "$0.00" },
     ],
   },
   {
-    category: "Street Eats",
-    image: "/image/K2.jpg",
-    items: [
-      { name: "Fries", price: "$0.00" },
-      { name: "Cheese Sticks", price: "$0.00" },
-      { name: "Gol Gappe", price: "$0.00" },
-      { name: "Papri Chaat", price: "$0.00" },
-      { name: "Chaat", price: "$0.00" },
-      { name: "Pasta", price: "$0.00" },
-      { name: "Pakoras", price: "$0.00" },
-    ],
-  },
-  {
-    category: "Desserts",
+  category: "Desserts",
     image: "/image/K6.jpg",
     items: [
       { name: "Pastry", price: "$0.00" },
-      { name: "Brownie", price: "$0.00" },
-      { name: "Ice Cream", price: "$0.00" },
       { name: "Waffles", price: "$0.00" },
       { name: "Cheesecake", price: "$0.00" },
+      { name: "Brownies with Ice Cream", price: "$0.00" },
+      { name: "Ice Cream", price: "$0.00" },
     ],
-  },
+    },
+    
 ];
 
+
 const Food = () => {
+  const [openCategory, setOpenCategory] = useState(null);
+
+  const handleToggle = (category) => {
+    setOpenCategory(openCategory === category ? null : category);
+  };
+
   return (
-    <Box sx={{ textAlign: "center", p: 4 }}>
-      <Grid container spacing={4} justifyContent="center">
-        {menuData.length > 0 ? (
-          menuData.map((menu, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index} className="menu-grid">
-              <div className="menu-flip-card">
-                <div className="menu-flip-card-inner">
-                  
-                  {/* Front Side (Main Menu Image) */}
-                  <div className="menu-flip-card-front">
-                    <img src={menu.image} alt={menu.category} className="menu-image" />
-                  </div>
+    <Box sx={{ textAlign: "center", p: 4, background: "white" }}>
+      <Grid
+        container
+        spacing={3}
+        justifyContent="center"
+        sx={{ width: "99%", margin: "0 auto" }} // Set margins for equal spacing
+      >
+        {/* First two rows with 4 items each */}
+        {menuData.slice(0, 8).map((menu, index) => (
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={3}
+            key={index}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Box
+              sx={{
+                cursor: "pointer",
+                textAlign: "center",
+                width: "100%",
+                maxWidth: "280px",
+                height: "380px",
+                background: "white",
+                borderRadius: "10px",
+                overflow: "hidden",
+                boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.3s ease-in-out",
+              }}
+              onClick={() => handleToggle(menu.category)}
+            >{openCategory === menu.category ? (
+              <Box sx={{ width: "100%", background: "#333", height: "100%", color: "white", position: "relative", p: 3 }}>
+                
+                {/* Brush Stroke Heading (Single-Line Fix) */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "-20px", // Slight overlap on top outline
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    zIndex: 2,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "white",
+                      display: "inline-block",
+                      whiteSpace: "nowrap", // ✅ Keeps text in one line
+                      minWidth: "max-content", // ✅ Ensures text doesn’t wrap
+                      paddingX: "20px", // ✅ Adjusted padding dynamically
+                      paddingY: "10px",
+                      backgroundImage: "url('/image/paintbrush.png')",
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      marginTop:"18px",
+                      fontSize: { xs: "30px", sm: "34px", md: "36px" }, 
+                      fontWeight: "bold", 
+                      fontFamily: "Teko", 
+                    
+                    }}
+                  >
+                    {menu.category}
+                  </Typography>
+                </Box>
 
-                  {/* Back Side (Submenu Items) */}
-                  <div className="menu-flip-card-back">
-                    <Typography variant="h6" className="menu-category">
-                      {menu.category}
-                    </Typography>
-                    <ul className="menu-list">
-                      {menu.items.map((item, idx) => (
-                        <li key={idx} className="menu-item">
-                        <span style={{ textAlign: "left", minWidth: "120px" }}>{item.name}</span>
-                        <span className="divider">----------------</span>
-                        <span style={{ textAlign: "right", minWidth: "60px" }}>{item.price}</span>
+                {/* White Outline Box */}
+                <Box
+                  sx={{
+                    border: "2px solid white",
+                    padding: "20px",
+                    borderRadius: "5px",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    marginTop: "20px", // Adjusted to let the brush stroke overlap
+                  }}
+                >
+                  <ul style={{ padding: "0", margin: "0" }}>
+                    {menu.items.map((item, idx) => (
+                      <li
+                        key={idx}
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          color: "white",
+                          padding: "8px 0",
+                          borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                          marginTop:"10px",
+                          fontFamily:"Roboto",
+                        }}
+                      >
+                        <span>{item.name}</span>
+                        <span>{item.price}</span>
                       </li>
-                      
-                      ))}
-                    </ul>
-                  </div>
-
-                </div>
-              </div>
-            </Grid>
-          ))
-        ) : (
-          <Typography variant="h6">No menu items available</Typography>
-        )}
-      </Grid>
-       
+                    ))}
+                  </ul>
+                </Box>
+              </Box>
+            ) : (
+              <img
+                src={menu.image}
+                alt={menu.category}
+                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px" }}
+              />
+            )}
+          </Box>
+        </Grid>
+      ))}
    
-    <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-    <Link to="/viewmenu" style={{ textDecoration: "none" }}>
-      <Button sx={{ backgroundColor: "orange", color: "black", padding: "10px 20px", fontSize: "16px" }}>
-        View Menu
-      </Button>
-    </Link>
-  </Box>
-</Box>
+
+        {/* Third row with 5 items, ensuring proper alignment */}
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          sx={{ width: "99%", margin: "0 auto", mt: 1 }} // Ensure same margin as previous rows
+        >
+          {menuData.slice(8, 13).map((menu, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={2.4} // Adjusted width for 5 items in a row
+              key={index}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  cursor: "pointer",
+                  textAlign: "center",
+                  width: "100%",
+                  maxWidth: "230px", // Slightly smaller for equal spacing
+                  height: "380px",
+                  background: "white",
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "all 0.3s ease-in-out",
+                }}
+                onClick={() => handleToggle(menu.category)}
+              >
+                {openCategory === menu.category ? (
+              <Box sx={{ width: "100%", background: "#333", height: "100%", color: "white", position: "relative", p: 3 }}>
+                
+                {/* Brush Stroke Heading (Single-Line Fix) */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "-20px", // Slight overlap on top outline
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    zIndex: 2,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "white",
+                      display: "inline-block",
+                      whiteSpace: "nowrap", // ✅ Keeps text in one line
+                      minWidth: "max-content", // ✅ Ensures text doesn’t wrap
+                      paddingX: "20px", // ✅ Adjusted padding dynamically
+                      paddingY: "10px",
+                      backgroundImage: "url('/image/paintbrush.png')",
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      marginTop:"18px",
+                      fontSize: { xs: "30px", sm: "34px", md: "36px" }, 
+                      fontWeight: "bold", 
+                      fontFamily: "Teko", 
+                    
+                    }}
+                  >
+                    {menu.category}
+                  </Typography>
+                </Box>
+
+                {/* White Outline Box */}
+                <Box
+                  sx={{
+                    border: "2px solid white",
+                    padding: "20px",
+                    borderRadius: "5px",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    marginTop: "20px", // Adjusted to let the brush stroke overlap
+                  }}
+                >
+                  <ul style={{ padding: "0", margin: "0" }}>
+                    {menu.items.map((item, idx) => (
+                      <li
+                        key={idx}
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          color: "white",
+                          padding: "8px 0",
+                          borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                          marginTop:"10px",
+                          fontFamily:"Roboto",
+                        }}
+                      >
+                        <span>{item.name}</span>
+                        <span>{item.price}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </Box>
+              </Box>
+            ) : (
+              <img
+                src={menu.image}
+                alt={menu.category}
+                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px" }}
+              />
+            )}
+          </Box>
+        </Grid>
+      ))}
+        </Grid>
+      </Grid>
+
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Link to="/viewmenu" style={{ textDecoration: "none" }}>
+          <Button
+            sx={{
+              backgroundColor: "orange",
+              color: "black",
+              padding: "10px 20px",
+              fontSize: "16px",
+            }}
+          >
+            View Menu
+          </Button>
+        </Link>
+      </Box>
+    </Box>
   );
 };
 

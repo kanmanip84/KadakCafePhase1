@@ -73,9 +73,9 @@ const UploadVideo = () => {
             
 
             <Button 
-  variant="primary" 
-  onClick={checkPassword} 
-  style={{ backgroundColor: "#5E0605", color: "white", border: "none" }}
+             variant="primary" 
+             onClick={checkPassword} 
+             style={{ backgroundColor: "#5E0605", color: "white", border: "none" }}
 >
               Submit
             </Button>

@@ -1,6 +1,7 @@
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+
 import MailIcon from "@mui/icons-material/Mail";
 import CallIcon from "@mui/icons-material/Call";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Footer from "../components/Layout/Footer";
 import Header from "./../components/Layout/Header";
 import React, { useEffect, useRef } from "react";
@@ -51,7 +52,7 @@ import {
           paddingTop: "80px", // Ensure there's space for header
         }}
       >
-        <Typography variant="h4" fontWeight="bold" sx={{ fontSize: "2.5rem", mb: 5, mt: -3 }}>
+        <Typography variant="h4" fontWeight="bold" sx={{ fontSize: "2.5rem", mb: 5, mt: -3 ,fontFamily:"Teko" }}>
           Contact
         </Typography>
       </Box>
@@ -86,18 +87,22 @@ import {
         >
           {/* Left Side: Text Section */}
           <Box sx={{ flex: 1, minWidth: "300px" }}>
-            <Typography variant="h4" sx={{ fontWeight: "bold", color: "#ffcc00" }}>
+            <Typography 
+            variant="h4"
+                      sx={{ color: "#ffcc00", fontWeight: "bold" ,fontSize: { xs: "2rem", md: "2.5rem" },fontFamily:"Teko" }}>
+                    
               Contact My Restaurant
             </Typography>
             <br />
-            <Typography variant="body1" sx={{ textAlign: "justify", color: "black" }}>
+            <Typography variant="body1" sx={{ textAlign: "justify", color: "black" ,fontSize: "18px", fontFamily: "Roboto", display: "inline" }}>
+            
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio
               beatae ducimus magni nobis culpa praesentium velit expedita quae,
               corrupti, pariatur inventore laboriosam consectetur modi impedit
               error, repudiandae obcaecati doloribus.
             </Typography>
-            <br />
-            <Typography variant="body1" sx={{ textAlign: "justify", color: "black" }}>
+            <br /><br/>
+            <Typography variant="body1" sx={{ textAlign: "justify", color: "black" ,fontSize: "18px", fontFamily: "Roboto", display: "inline" }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem odio
               beatae ducimus magni nobis culpa praesentium velit expedita quae,
               corrupti, pariatur inventore laboriosam consectetur modi impedit
@@ -112,7 +117,10 @@ import {
                 <TableHead>
                   <TableRow>
                     <TableCell
-                      sx={{ bgcolor: "black", color: "white", fontWeight: "bold" }}
+                    variant="h4"
+                    
+                      sx={{ bgcolor: "black", color: "white", fontWeight: "bold" ,fontSize: { xs: "2rem", md: "2.5rem" },fontFamily:"Teko" }}
+                     
                       align="center"
                     >
                       Contact Details
@@ -120,21 +128,30 @@ import {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      <SupportAgentIcon sx={{ color: "red", pt: 1 }} /> 1800-00-0000 (Toll-Free)
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <MailIcon sx={{ color: "skyblue", pt: 1 }} /> contact@kadakcafe.ca
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <CallIcon sx={{ color: "green", pt: 1 }} /> +1 403 923 8621
-                    </TableCell>
-                  </TableRow>
+                <TableRow>
+      <TableCell>
+        <LocationOnIcon sx={{ color: "red", pt: 1 }} />{" "}
+        <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
+          6818 Ellerslie road SW, Edmonton, Alberta, TX6 1A3
+        </Typography>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+        <MailIcon sx={{ color: "skyblue", pt: 1 }} />{" "}
+        <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
+          contact@kadakcafe.ca
+        </Typography>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+        <CallIcon sx={{ color: "green", pt: 1 }} />{" "}
+        <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
+          +1 403 923 8621
+        </Typography>
+      </TableCell>
+    </TableRow>
                 </TableBody>
               </Table>
             </TableContainer>
@@ -159,7 +176,7 @@ import {
         <Typography
           variant="h3"
           fontWeight="bold"
-          sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, position: "relative", mb: 1 }}
+          sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, position: "relative", mb: 1,fontFamily:"Teko"  }}
         >
           Our Location
         </Typography>
@@ -168,7 +185,7 @@ import {
             width: "100%", // Responsive width
             maxWidth: "300px", // Matches heading width
             height: "4px",
-            backgroundColor: "orange",
+            backgroundColor: "#5D0A0B",
           }}
         ></Box>
       </Box>

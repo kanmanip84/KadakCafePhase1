@@ -90,11 +90,10 @@ const WhyKadakCafe = () => {
                 <Box sx={{ flex: 1 }}>
                 <Typography variant="h4" fontWeight="bold"  sx={{ mt: 5,fontFamily:"Teko" }}>
                     {item.title}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, mt: 1,fontFamily:"Roboto" }}
-                  >
+                  </Typography><br/>
+                  
+                     <Typography variant="body1" sx={{ textAlign: "justify", color: "black" ,fontSize: "18px", fontFamily: "Roboto", display: "inline" , mt: 1}}>
+                               
                     {item.text}
                   </Typography>
                 </Box>

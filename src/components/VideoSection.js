@@ -13,7 +13,21 @@ const VideoSection = () => {
       <Box className="video-overlay"></Box>
 
       <Box className="overlay-heading">
-         <span className="highlight">Kadak Cafe</span> 
+        <Typography 
+                        variant="h6" 
+                        sx={{ 
+                          color: "white", 
+                          fontSize: { xs: "30px", sm: "34px", md: "36px" }, 
+                          fontWeight: "bold", 
+                          fontFamily: "Teko", 
+                          whiteSpace: "nowrap",
+                          maxWidth: "100%",
+                          marginTop:"100px",
+                        }}
+                      >
+                       <span className="highlight">Kadak Cafe</span> 
+                      </Typography>
+        
         <Typography className="banner-subheading">
           Proud to be a completely <span className="highlight">vegetarian</span> cafe in Alberta
         </Typography>

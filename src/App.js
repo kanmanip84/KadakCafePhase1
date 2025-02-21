@@ -4,7 +4,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 import ViewMenu from "./pages/ViewMenu";
+
+import OurStory from "./pages/OurStory";
 import Pagenotfound from "./pages/Pagenotfound";
+
 
 
 function App() {
@@ -17,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
       
           <Route path="/viewmenu" element={<ViewMenu />} />
+          <Route path="/ourstory" element={<OurStory/>} />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>
       </BrowserRouter>
