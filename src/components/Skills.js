@@ -46,7 +46,7 @@ const Skills = () => {
         p: { xs: 5, md: 8 },
         minHeight: "50vh", // Increase height
         width: "100vw", // Full width
-        backgroundImage: `url("/image/coffeefoam.jpg")`,
+        backgroundImage: `url("/image/Coffeefoam.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
