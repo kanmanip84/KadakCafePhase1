@@ -3,22 +3,22 @@ import { People, Diversity1, Lightbulb, Storefront } from "@mui/icons-material";
 
 const values = [
   {
-    icon: <People fontSize="large" color="primary" />,
+    icon: <People fontSize="large" color="black" />,
     title: "Building Trust",
     description: "Trust is the cornerstone of our relationship with customers. We prioritize transparency, consistency, and reliability in every interaction.",
   },
   {
-    icon: <Diversity1 fontSize="large" color="secondary" />,
+    icon: <Diversity1 fontSize="large" color="black" />,
     title: "Inclusivity",
     description: "At Chai Bar, everyone is MOST WELCOME! We celebrate diversity and strive to create a space where individuals from all walks of life feel valued and respected.",
   },
   {
-    icon: <Lightbulb fontSize="large" style={{ color: "#f4b400" }} />,
+    icon: <Lightbulb fontSize="large" style={{ color: "black" }} />,
     title: "Innovation",
     description: "While rooted in traditional methods, Chai Bar keeps experimenting with new flavors and listens to customer feedback.",
   },
   {
-    icon: <Storefront fontSize="large" style={{ color: "#34a853" }} />,
+    icon: <Storefront fontSize="large" style={{ color: "black" }} />,
     title: "Franchise Opportunity",
     description: "We offer a unique chai bar franchise in Canada for passionate entrepreneurs who share our vision and values.",
   },

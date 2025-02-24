@@ -24,9 +24,7 @@ const HeroSection = () => {
           color: "white",
         }}
       >
-        <Typography variant="h3" fontWeight="bold">
-          The Chai Bar
-        </Typography>
+       
       </Box>
 
       {/* Feature Boxes */}

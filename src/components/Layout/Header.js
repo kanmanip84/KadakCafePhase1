@@ -41,14 +41,15 @@ const Header = () => {
               style={{ 
                 height: "60px", 
                 paddingLeft: "0px", 
-                cursor: "pointer" // Changes cursor to indicate it's clickable
+                cursor: "pointer", // Changes cursor to indicate it's clickable
               }} 
             />
 
             {/* Cafe Name + Subheading in Flex Column */}
             <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", ml: { xs: 1, sm: 2 ,md:1} }}>
-              <Typography 
+            <Typography 
                 variant="h6" 
+                onClick={() => handleNavigation("/")} // Click navigates to Home
                 sx={{ 
                   color: "white", 
                   fontSize: { xs: "30px", sm: "34px", md: "36px" }, 
@@ -56,6 +57,8 @@ const Header = () => {
                   fontFamily: "Teko", 
                   whiteSpace: "nowrap",
                   maxWidth: "100%",
+                  cursor: "pointer", // Indicates it's clickable
+                  "&:hover": { color: "gold" } // Hover effect
                 }}
               >
                 Kadak Cafe
@@ -90,7 +93,9 @@ const Header = () => {
                   fontSize: { sm: "16px", md: "20px" }, 
                   fontWeight: "bold", 
                   textTransform: "capitalize", 
-                  fontFamily: "Teko" 
+                  fontFamily: "Teko" ,
+                  cursor: "pointer", // Indicates it's clickable
+                  "&:hover": { color: "gold" } // Hover effect
                 }} 
                 onClick={() => handleNavigation(item.path)}
               >
@@ -119,18 +124,20 @@ const Header = () => {
             src={logo} 
             alt="Kadak Cafe Logo" 
             onClick={() => handleNavigation("/")} // Navigates to Home
-            style={{ height: "60px", cursor: "pointer" }} 
+            style={{ height: "60px", cursor: "pointer","&:hover": { color: "gold" } }} 
           />
 
           <Typography 
             variant="h6" 
+            onClick={() => handleNavigation("/")} // Click navigates to Home
             sx={{ 
               color: "white", 
               fontSize: "26px", 
               fontWeight: "bold", 
               fontFamily: "Teko", 
-              marginTop: "10px" ,
-              
+              marginTop: "10px",
+              cursor: "pointer",
+              "&:hover": { color: "gold" }
             }}
           >
             Kadak Cafe
