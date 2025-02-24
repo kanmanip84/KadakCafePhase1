@@ -45,7 +45,7 @@
   gap: 10px;
   font-size: 3.5rem; /* Fixed for Web */
   font-weight: bold;
-  color: orange; /* Ensures correct color */
+  color: #5D0A0B; /* Ensures correct color */
   font-family: 'Cursive', sans-serif;
   margin-bottom: 15px;
   text-align: center;
@@ -60,7 +60,7 @@
 }
 
 .highlight-text {
-  color: orange;
+  color: #5D0A0B;
   font-weight: bold;
 }
 
@@ -88,7 +88,7 @@
 
 /* Category Name */
 .viewmenu-heading {
-  background-color: orange;
+  background-color: #5D0A0B;
   color: white;
   text-align: center;
   padding: 12px 0;
@@ -178,7 +178,7 @@
     justify-content: center;
     flex-wrap: nowrap;
     gap: 5px;
-    color: orange;
+    color: #5D0A0B;
   }
 
   .bhaap {
@@ -228,7 +228,7 @@
     justify-content: center;
     flex-wrap: nowrap;
     gap: 5px;
-    color: orange;
+    color: #5D0A0B;
   }
 
   .bhaap {

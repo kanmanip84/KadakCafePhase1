@@ -1,22 +1,50 @@
 import React from "react";
 import Footer from "../components/Layout/Footer";
 import Header from "./../components/Layout/Header";
-import { Typography } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 
 const OurStory = () => {
   return (
     <>
       <Header />
       <div style={styles.container}>
-      <h2 style={styles.heading}>
-      <Typography
-            variant="h2"
-            fontWeight="bold"
-            sx={{ textShadow: "2px 2px 10px rgba(0,0,0,0.7)" }}
-          >
-           
-          </Typography>
-        Our Story</h2>
+    
+      <Box
+  sx={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    mt: 5,
+    mb: 5,
+    width: "100%",
+  }}
+>
+  <Typography
+    variant="h3"
+    fontWeight="bold"
+    sx={{
+      fontSize: { xs: "2rem", md: "2.5rem" },
+      mb: 1,
+      fontFamily: "Teko",
+      color: "#5D0A0B",
+    }}
+  >
+    Our Story
+  </Typography>
+  <Box
+    sx={{
+      width: { xs: "50%", sm: "40%", md: "30%" }, 
+      maxWidth: "200px", 
+      height: "3px", 
+      backgroundColor: "#5D0A0B",
+      mx: "auto",
+    }}
+  />
+</Box>
+
+         <br></br><br></br>
 
         {/* ✅ First Row */}
         <div style={styles.firstRow}>

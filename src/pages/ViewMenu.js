@@ -1,5 +1,5 @@
 import React,{ useEffect } from "react";
-import { Typography } from "@mui/material";
+import { Typography,Box } from "@mui/material";
 import "./../components/ViewMenu.css"; // Ensure correct CSS file
 import Footer from "../components/Layout/Footer";
 import Header from "./../components/Layout/Header";
@@ -174,25 +174,40 @@ const ViewMenu = () => {
         <img src="/image/spairal.jpg" alt="Spiral" className="spiral" />
         <div className="menu-container">
         {/* Heading with Steam Effect */}
-        <h2 className="viewmenu-title">
+      
           <br></br>
-          <img src="/videos/black_bhaap.gif" className="bhaap" height="80px"  alt=""/>
-          <span className="hide"> <Typography 
-            variant="h4"
-                      sx={{  fontWeight: "bold" ,fontSize: { xs: "2rem", md: "2.5rem" },fontFamily:"Teko" }}>
-                    
-              Our
-            </Typography></span> <Typography 
-            variant="h4"
-                      sx={{  fontWeight: "bold" ,fontSize: { xs: "2rem", md: "2.5rem" },fontFamily:"Teko" }}>
-                    
-              Menu
-            </Typography>
+          <h2 className="viewmenu-title" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+  <img src="/videos/black_bhaap.gif" className="bhaap" height="80px" alt="" />
 
-            
-            
-          <img src="/videos/black_bhaap.gif" className="bhaap hide" height="80px" alt="" />
-        </h2>
+  <Box sx={{ textAlign: "center", position: "relative", display: "inline-block" }}>
+    <Typography
+      variant="h4"
+      sx={{
+        fontWeight: "bold",
+        fontSize: { xs: "2rem", md: "2.5rem" },
+        fontFamily: "Teko",
+        display: "inline-block",
+      }}
+    >
+      Our Menu
+    </Typography>
+    
+
+    {/* Underline applied only to "Our Menu" */}
+    <Box
+      sx={{
+        width: "100%",
+        height: "4px",
+        backgroundColor: "#5D0A0B",
+        position: "absolute",
+        bottom: "-5px",
+        left: "0",
+      }}
+    />
+  </Box>
+
+  <img src="/videos/black_bhaap.gif" className="bhaap hide" height="80px" alt="" />
+</h2>
 
         <p className="viewmenu-subtitle">
           100% <span className="highlight-text">Vegetarian</span> Food

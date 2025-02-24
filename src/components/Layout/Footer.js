@@ -39,7 +39,8 @@ const Footer = () => {
             },
           }}
         >
-          All Rights Reserved &copy; Emploitech.development
+          Copyright © 2025 All Rights Reserved by The <span style={{ color: "orange" }}>KadakCafe</span>
+       
         </Typography>
       </Box>
     </>

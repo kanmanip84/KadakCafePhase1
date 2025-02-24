@@ -10,38 +10,42 @@ const values = [
   {
     icon: <Diversity1 fontSize="large" color="black" />,
     title: "Inclusivity",
-    description: "At Chai Bar, everyone is MOST WELCOME! We celebrate diversity and strive to create a space where individuals from all walks of life feel valued and respected.",
+    description: "At Kadak Cafe, everyone is MOST WELCOME! We celebrate diversity and strive to create a space where individuals from all walks of life feel valued and respected.",
   },
   {
     icon: <Lightbulb fontSize="large" style={{ color: "black" }} />,
     title: "Innovation",
-    description: "While rooted in traditional methods, Chai Bar keeps experimenting with new flavors and listens to customer feedback.",
+    description: "While rooted in traditional methods, Kadak Cafe keeps experimenting with new flavors and listens to customer feedback.",
   },
   {
     icon: <Storefront fontSize="large" style={{ color: "black" }} />,
     title: "Franchise Opportunity",
-    description: "We offer a unique chai bar franchise in Canada for passionate entrepreneurs who share our vision and values.",
+    description: "We offer a unique Kadak Cafe franchise in Canada for passionate entrepreneurs who share our vision and values.",
   },
 ];
 
 const Values = () => {
   return (
     <Box sx={{ p: 7, textAlign: "center", backgroundColor: "white", width: "100%", }}>
-      {/* Feature Boxes */}
+     
       <div>
-        
-         <Typography
-            variant="h6"
-           
-          > At &nbsp;
-            <span style={{ color: "orange",fontFamily:"Teko" }}>Kadak Cafe</span>&nbsp; we bring the bold flavors of India’s streets to your plate. From our
-            &nbsp;<span style={{ color: "orange" ,fontFamily:"Teko"}}>kadak chai</span>&nbsp;to spicy street food, every bite and sip is a celebration of authentic Indian taste. Fresh ingredients, traditional spices, and a whole lot of love go into every dish.  
+  
+      <Typography variant="h6" sx={{ 
+       
+        mt: 2,
+        color: "black",
+        lineHeight: "1.8",
+        fontFamily:"Roboto",
+     
+    }}
+  >
+    At &nbsp;
+    <span style={{ color: "orange" }}>Kadak Cafe</span>&nbsp; we bring the bold flavors of India’s streets to your plate. From our
+    &nbsp;<span style={{ color: "orange" }}>kadak chai</span>&nbsp; to spicy street food, every bite and sip is a celebration of authentic Indian taste. Fresh ingredients, traditional spices, and a whole lot of love go into every dish.
+    Come, experience the magic of India’s vibrant street food culture, one kadak moment at a time.
+  </Typography>
+</div>
 
-            Come, experience the magic of India’s vibrant street food culture, one kadak moment at a time.
-          </Typography>
-        
-         
-      </div>   
           <Grid container spacing={15} justifyContent="center" sx={{ mt: -5 }}>
               {values.map((item, index) => (
                 <Grid item xs={12} sm={6} md={3} key={index}>
@@ -87,10 +91,10 @@ const Values = () => {
                     </Box>
       
                     {/* Title & Description */}
-                    <Typography variant="h4" fontWeight="bold" sx={{ mt: 5 }}>
+                    <Typography variant="h4" fontWeight="bold" sx={{ mt: 5 ,fontFamily: "Teko"}}>
                       {item.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ mt: 2, px: 2 }}>
+                    <Typography variant="body2" sx={{ mt: 2, px: 2,fontFamily: "Roboto" }}>
                       
                       {item.description}
                     </Typography>

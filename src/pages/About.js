@@ -41,7 +41,7 @@ const About = () => {
           paddingTop: "80px", // Ensure there's space for header
         }}
       >
-        <Typography variant="h4" fontWeight="bold" sx={{ fontSize: "2.5rem", mb: 5, mt: -3 }}>
+        <Typography variant="h4" fontWeight="bold" sx={{ fontSize: "2.5rem", mb: 5, mt: -3 ,color:"white"}}>
           About Us
         </Typography>
       </Box>

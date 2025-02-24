@@ -4,6 +4,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import logo from "../../images/HeaderLogo.png";
 
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
@@ -82,7 +87,30 @@ const Header = () => {
               </Typography>
             </Box>
           </Box>
-
+          {/* Centered Social Media Icons */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexGrow: 1,
+              "& svg": {
+                fontSize: "25px",
+                cursor: "pointer",
+                mx: 1,
+              },
+              "& svg:hover": {
+                color: "goldenrod",
+                transform: "translateY(-3px)",
+                transition: "all 400ms",
+              },
+            }}
+          >
+            <InstagramIcon />
+            <TwitterIcon />
+            <GitHubIcon />
+            <YouTubeIcon />
+          </Box>
           {/* Right Section: Desktop Navigation */}
           <Box sx={{ display: { xs: "none", sm: "flex" }, gap: { sm: "10px", md: "20px" } }}>
             {navItems.map((item) => (

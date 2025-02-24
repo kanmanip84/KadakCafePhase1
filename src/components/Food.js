@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid,Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 
@@ -171,7 +171,7 @@ const Food = () => {
         {menuData.map((menu, index) => (
           <Grid
             item
-            xs={12} sm={6} md={3} // Ensuring 4 items per row
+            xs={12} sm={6} md={3}
             key={index}
             sx={{ display: "flex", justifyContent: "center" }}
           >
@@ -190,13 +190,16 @@ const Food = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 transition: "all 0.3s ease-in-out",
+                position: "relative",
+                '&:hover': { openCategory: menu.category }, // Display on hover
               }}
               onClick={() => handleToggle(menu.category)}
+              onMouseEnter={() => setOpenCategory(menu.category)}
+              onMouseLeave={() => setOpenCategory(null)}
             >
-               {openCategory === menu.category ? (
-              <Box sx={{ width: "100%", background: "#333", height: "100%", color: "white", position: "relative", p: 3 }}>
-                
-                {/* Brush Stroke Heading (Single-Line Fix) */}
+              {openCategory === menu.category ? (
+                <Box sx={{ width: "100%", background: "#333", height: "100%", color: "white", position: "relative", p: 3 }}>
+                  {/* Brush Stroke Heading (Single-Line Fix) */}
                 <Box
                   sx={{
                     position: "absolute",
@@ -229,55 +232,74 @@ const Food = () => {
                     {menu.category}
                   </Typography>
                 </Box>
-
-
-                   {/* White Outline Box */}
-                <Box
-                  sx={{
+                  <Box sx={{
                     border: "2px solid white",
                     padding: "20px",
                     borderRadius: "5px",
                     backgroundColor: "rgba(0, 0, 0, 0.7)",
-                    marginTop: "20px", // Adjusted to let the brush stroke overlap
-                  }}
-                >
-                  <ul style={{ padding: "0", margin: "0" }}>
-                    {menu.items.map((item, idx) => (
-                      <li
-                        key={idx}
-                        style={{
-                          display: "flex",
-                          justifyContent: "space-between",
-                          color: "white",
-                          padding: "8px 0",
-                          borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                          marginTop:"10px",
-                          fontFamily:"Roboto",
-                        }}
-                      >
-                        <span>{item.name}</span>
-                        <span>{item.price}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    marginTop: "20px",
+                  }}>
+                    <ul style={{ padding: "0", margin: "0" }}>
+                      {menu.items.map((item, idx) => (
+                        <li
+                          key={idx}
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            color: "white",
+                            padding: "8px 0",
+                            borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                            marginTop: "10px",
+                            fontFamily: "Roboto",
+                          }}
+                        >
+                          <span>{item.name}</span>
+                          <span>{item.price}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </Box>
                 </Box>
-              </Box>
-            ) : (
-              <img
-                src={menu.image}
-                alt={menu.category}
-                style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px" }}
-              />
-            )}
-          </Box>
-        </Grid>
-      ))}
-        </Grid>
-      
+              ) : (
+                <img
+                  src={menu.image}
+                  alt={menu.category}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px" }}
+                />
+              )}
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
       <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-        <Link to="/viewmenu" style={{ textDecoration: "none" }}>
-          <Button sx={{ backgroundColor: "orange", color: "black", padding: "10px 20px", fontSize: "16px" }}>View Menu</Button>
-        </Link>
+       
+
+
+
+        <Link
+            to="/viewmenu"
+            style={{
+              display: "inline-block",
+              fontWeight: "bold",
+              color: "white",
+              backgroundColor:"#5E0606",
+              textDecoration: "none",
+              border: "2px solid #5E0606",
+              padding: "8px 12px",
+              borderRadius: "5px",
+              transition: "0.3s",
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = "orange";
+              e.target.style.color = "black";
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = "#5E0606";
+              e.target.style.color = "white";
+            }}
+          >
+            View Menu
+          </Link>
       </Box>
     </Box>
   );

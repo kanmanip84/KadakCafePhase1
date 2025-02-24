@@ -4,8 +4,8 @@ import { Favorite, LocalCafe, People, Public } from "@mui/icons-material";
 const features = [
   { icon: <Favorite fontSize="large" />, title: "Authentic Chai Experience", text: "Transport yourself to the bustling streets of India with our authentic chai blends made using ultra-premium tea leaves and spices." },
   { icon: <LocalCafe fontSize="large" />, title: "Variety of Flavors", text: "From traditional Masala cutting chai to innovative twists like Tulsi, Gur, Adrak, Kesar, and Paan, explore our wide range of flavors!" },
-  { icon: <People fontSize="large" />, title: "Community Hub", text: "Chai Bar isn’t just a spot to have a hot drink, it’s an arena where friends, colleagues, and family gather to make connections." },
-  { icon: <Public fontSize="large" />, title: "Sustainable Sourcing", text: "Chai Bar sources ingredients directly from trusted farmers using eco-friendly production methods for a sustainable experience." },
+  { icon: <People fontSize="large" />, title: "Community Hub", text: "Kadak Cafe isn’t just a spot to have a hot drink, it’s an arena where friends, colleagues, and family gather to make connections." },
+  { icon: <Public fontSize="large" />, title: "Sustainable Sourcing", text: "Kadak Cafe sources ingredients directly from trusted farmers using eco-friendly production methods for a sustainable experience." },
 ];
 
 const HeroSection = () => {

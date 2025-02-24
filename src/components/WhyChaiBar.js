@@ -2,10 +2,10 @@ import { Box, Grid, Typography } from "@mui/material";
 import { Favorite, Visibility, Build, ShoppingCart } from "@mui/icons-material";
 
 const features = [
-  { icon: <Favorite fontSize="large" />, title: "Ambiance", text: "Chai Bar creates a warm, cozy, and inviting environment for the customers to enjoy their chai." },
-  { icon: <Visibility fontSize="large" />, title: "Accessibility", text: "With 5+ outlets spread across Canada, Chai Bar ensures easy access for customers in various cities and neighborhoods" },
-  { icon: <Build fontSize="large" />, title: "Customization", text: "Whether it’s adjusting the sweetness level or adding extra spices, Chai Bar in Canada is always ready to tailor their chai drink according to their liking." },
-  { icon: <ShoppingCart fontSize="large" />, title: "Bulk Orders", text: "Catering to large gatherings, Chai Bar in Canada provides options for bulk ordering with 50+ servings, perfect for events and parties!" },
+  { icon: <Favorite fontSize="large" />, title: "Ambiance", text: "Kadak Cafe creates a warm, cozy, and inviting environment for the customers to enjoy their chai." },
+  { icon: <Visibility fontSize="large" />, title: "Accessibility", text: "With 5+ outlets spread across Canada, Kadak Cafe ensures easy access for customers in various cities and neighborhoods" },
+  { icon: <Build fontSize="large" />, title: "Customization", text: "Whether it’s adjusting the sweetness level or adding extra spices, Kadak Cafe in Canada is always ready to tailor their chai drink according to their liking." },
+  { icon: <ShoppingCart fontSize="large" />, title: "Bulk Orders", text: "Catering to large gatherings, Kadak Cafe in Canada provides options for bulk ordering with 50+ servings, perfect for events and parties!" },
 ];
 
 const WhyKadakCafe = () => {

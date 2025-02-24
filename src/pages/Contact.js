@@ -85,9 +85,9 @@ const Contact = () => {
           <Box sx={{ flex: 1, minWidth: "300px" }}>
             <Typography
               variant="h4"
-              sx={{ color: "#ffcc00", fontWeight: "bold", fontSize: { xs: "2rem", md: "2.5rem" }, fontFamily: "Teko" }}
+              sx={{ color: "#5D0A0B", fontWeight: "bold", fontSize: { xs: "2rem", md: "2.5rem" }, fontFamily: "Teko" }}
             >
-              Contact My Restaurant
+              Contact Kadak Cafe
             </Typography>
             <br />
             <Typography
@@ -116,7 +116,7 @@ const Contact = () => {
             <Typography
               variant="h3"
               fontWeight="bold"
-              sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 1, fontFamily: "Teko" }}
+              sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 1, fontFamily: "Teko" ,color:"#5D0A0B"}}
             >
               Contact Details
             </Typography>
@@ -136,7 +136,7 @@ const Contact = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <LocationOnIcon sx={{ color: "red", pt: 1 }} />{" "}
+                      <LocationOnIcon sx={{ color: "red", pt: 1 }} />
                       <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
                         6818 Ellerslie Road SW, Edmonton, Alberta, TX6 1A3
                       </Typography>
@@ -144,7 +144,7 @@ const Contact = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <MailIcon sx={{ color: "skyblue", pt: 1 }} />{" "}
+                      <MailIcon sx={{ color: "skyblue", pt: 1 }} />
                       <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
                         contact@kadakcafe.ca
                       </Typography>
@@ -152,7 +152,7 @@ const Contact = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <CallIcon sx={{ color: "green", pt: 1 }} />{" "}
+                      <CallIcon sx={{ color: "green", pt: 1 }} />
                       <Typography sx={{ fontSize: "17px", fontFamily: "Roboto", display: "inline" }}>
                         +1 403 923 8621
                       </Typography>
@@ -164,6 +164,7 @@ const Contact = () => {
           </Box>
         </Box>
       </Box>
+
 
       {/* Our Location Section */}
       <Box
@@ -178,7 +179,7 @@ const Contact = () => {
           width: "100%",
         }}
       >
-        <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 1, fontFamily: "Teko" }}>
+        <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 1, fontFamily: "Teko" ,color:"#5D0A0B"}}>
           Our Location
         </Typography>
         <Box
@@ -192,26 +193,14 @@ const Contact = () => {
         />
       </Box>
 
+
+
       {/* Google Map */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          px: { xs: "5%", md: "1in" },
-        }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", px: { xs: "5%", md: "1in" }, mt: 5 }}>
         <iframe
           title="Google Map"
-          style={{
-            height: "3in",
-            width: "90%",
-            maxWidth: "500px",
-            borderRadius: "8px",
-            boxShadow: "0px 4px 10px rgba(0,0,0,0.3)",
-          }}
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.019362098566!2d-113.55979818490746!3d53.42262817880054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716ebf003f19d9%3A0x9f2417a6f8d20450!2s6818%20Ellerslie%20Rd%20SW%2C%20Edmonton%2C%20AB%20T6X%201A3%2C%20Canada!5e0!3m2!1sen!2sin!4v1707930412289!5m2!1sen!2sin"  allowFullScreen=""
+          style={{ height: "400px", width: "100%", maxWidth: "900px", borderRadius: "8px", boxShadow: "0px 4px 10px rgba(0,0,0,0.3)" }}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.019362098566!2d-113.55979818490746!3d53.42262817880054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716ebf003f19d9%3A0x9f2417a6f8d20450!2s6818%20Ellerslie%20Rd%20SW%2C%20Edmonton%2C%20AB%20T6X%201A3%2C%20Canada!5e0!3m2!1sen!2sin!4v1707930412289!5m2!1sen!2sin"    allowFullScreen=""
           loading="lazy"
         ></iframe>
       </Box>

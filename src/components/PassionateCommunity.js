@@ -40,17 +40,18 @@ const PassionateCommunity = () => {
         {/* Right Side - Text Content */}
         <Grid item xs={12} md={6} sx={{ textAlign: "left", pl: { md: 5 } }}>
           <Typography variant="h3" fontWeight="bold">  {/* Increased heading size */}
-            <span style={{ color: "#ff5733" }}>Passionate</span> Community
+            <span style={{ color: "#5D0A0B" }}>Passionate</span> Community
           </Typography>
           <Typography variant="h6" sx={{  /* Increased paragraph size */
             maxWidth: "600px",
             mt: 2,
             color: "black",
             lineHeight: "1.8",
+            fontFamily:"Roboto",
           }}>
-            Come, let us remove all your fears and troubles with a cup of Chai from Chai Bar.  
-            At Chai Bar, we are passionate about making sure you enjoy the best teas, coffees, and snacks while you enjoy your day.  
-            We are here to serve you our best collation of Punjabi Chai, a wide range of snacks and soft drinks.  
+            Come, let us remove all your fears and troubles with a cup of Chai from Kadak Cafe.  
+            At Kadak Cafe, we are passionate about making sure you enjoy the best teas, coffees, and snacks while you enjoy your day.  
+            We are here to serve you our best collation of Kadak Chai, a wide range of snacks and soft drinks.  
             Feel the warmth of being part of a community that shares the same joy of Chai with someone, anywhere in the world.
           </Typography>
         </Grid>
