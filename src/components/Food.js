@@ -194,8 +194,8 @@ const Food = () => {
                 '&:hover': { openCategory: menu.category }, // Display on hover
               }}
               onClick={() => handleToggle(menu.category)}
-              onMouseEnter={() => setOpenCategory(menu.category)}
-              onMouseLeave={() => setOpenCategory(null)}
+            //  onMouseEnter={() => setOpenCategory(menu.category)}
+             // onMouseLeave={() => setOpenCategory(null)}
             >
               {openCategory === menu.category ? (
                 <Box sx={{ width: "100%", background: "#333", height: "100%", color: "white", position: "relative", p: 3 }}>
