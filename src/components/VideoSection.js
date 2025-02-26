@@ -6,7 +6,7 @@ const VideoSection = () => {
   return (
     <Box className="video-container">
       <video autoPlay muted loop playsInline className="background-video">
-        <source src={`${process.env.PUBLIC_URL}/videos/hero.mp4`} type="video/mp4" />
+        <source src={`${process.env.PUBLIC_URL}/videos/woman-drinking-coffee.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
